@@ -1,6 +1,7 @@
 import Header from "@/components/ui/Header";
 import "./globals.css";
 import { Noto_Sans } from "next/font/google";
+import AuthContext from "@/context/AuthContext";
 
 const notoSans = Noto_Sans({ subsets: ["latin"], weight: "500" });
 
@@ -13,8 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${notoSans.className} overflow-auto max-w-4xl mx-auto`}>
-        <Header />
-        {children}
+        <AuthContext>
+          <Header />
+          {children}
+        </AuthContext>
       </body>
     </html>
   );
