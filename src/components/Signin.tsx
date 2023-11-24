@@ -9,7 +9,6 @@ type Props = {
 };
 
 export default function Signin({ callbackUrl, provider }: Props) {
-  console.log(callbackUrl, provider);
   return (
     <main className="flex justify-center pt-[30%]">
       {Object.values(provider).map((item) => (

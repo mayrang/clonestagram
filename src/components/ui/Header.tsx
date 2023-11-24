@@ -34,7 +34,7 @@ export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const { data: session } = useSession();
-  console.log(session);
+
   return (
     <header className="sticky top-0 left-0 px-6 py-6 flex justify-between items-center  border-b  z-10">
       <Link href="/" className="md:text-4xl text-2xl font-extrabold ">
