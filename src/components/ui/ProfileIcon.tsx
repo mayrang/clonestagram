@@ -10,7 +10,7 @@ type Props = {
 export default function ProfileIcon({ isBig = false, image, isHighlight = true }: Props) {
   return (
     <div
-      className={`rounded-full  overflow-hidden  ${isBig ? "p-[0.4rem] w-14 h-14" : "p-[0.2rem] w-9 h-9"} ${
+      className={`rounded-full  overflow-hidden  ${isBig ? "p-[0.4rem] w-16 h-16" : "p-[0.2rem] w-9 h-9"} ${
         isHighlight ? "bg-gradient-to-bl  from-fuchsia-600 via-rose-500 to-amber-300" : ""
       }`}
     >
