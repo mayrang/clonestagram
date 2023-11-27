@@ -9,3 +9,15 @@ export type CreateOrExistUser = {
   followings: string[];
   bookmarks: string[];
 };
+
+export type User = {
+  _id: string;
+  _type: string;
+  _createAt: string;
+  name: string;
+  username: string;
+  email: string;
+  image: string;
+  followings: User[];
+  followers: User[];
+};
