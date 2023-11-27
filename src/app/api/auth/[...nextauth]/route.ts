@@ -17,6 +17,7 @@ export const authOptions: NextAuthOptions = {
       if (!user.email) {
         return false;
       }
+
       const newUser = {
         _id: user.id,
         _type: "user",
@@ -34,10 +35,12 @@ export const authOptions: NextAuthOptions = {
     },
     async session({ session, token, user }: any) {
       // Send properties to the client, like an access_token and user id from a provider.
+
       session.accessToken = token.accessToken;
-      session.user.id = token.id;
-      session.user.username = session.email?.split("@")[0] ?? session.user.name;
+
+      session.user.username = session.user.email?.split("@")[0] ?? session.user.name;
       session.user.email = token.email;
+
       return session;
     },
   },
